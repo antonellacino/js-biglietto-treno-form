@@ -14,7 +14,7 @@ var msg = "";
 //GENERAZIONE del biglietto------------------------------------------------
 generaButton.addEventListener('click',
   function(){
-    document.getElementById('output').style.display = ('block');
+    document.getElementById('output').style.opacity = ("100%");
     nome = nomeU.value;
     km = kmP.value;
     eta = etaU.value;
@@ -24,14 +24,19 @@ generaButton.addEventListener('click',
     if (eta < 18) {
       costoBiglietto=costoBiglietto-(costoBiglietto*0.2); //costo biglietto=costoBiglietto*0.8
       msg=costoBiglietto.toFixed(2);
+      var sconto = "Biglietto scontato";
     } else if (eta > 65) {
       costoBiglietto=costoBiglietto-(costoBiglietto*0.4);//costo biglietto=costoBiglietto*0.6
       msg=costoBiglietto.toFixed(2);
+      var sconto = "Biglietto Over65";
     }else {
       msg=costoBiglietto.toFixed(2);
+      var sconto = "Biglietto Standard";
     }
     console.log(costoBiglietto);
     //rimando a video i risultati
+    document.getElementById('nome').innerHTML= nome;
+    document.getElementById('sconto').innerHTML= sconto;
     document.getElementById('costoBiglietto').innerHTML= msg;
   }
 )

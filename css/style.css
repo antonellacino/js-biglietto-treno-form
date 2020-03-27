@@ -6,7 +6,7 @@
 body{
   background-color: #0b66de;
 }
-h1,h2{
+h1{
   color: white;
 }
 .container{
@@ -25,12 +25,11 @@ h1,h2{
 }
 .campiInput{
   display: flex;
-  justify-content: center;
+  margin-top: 10px;
 }
 .flexColumn{
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
 }
 input{
@@ -44,6 +43,9 @@ input:focus{
   background-color: #0b66de;
   color: white;
 }
+label{
+  margin: 0 10px;
+}
 .btn{
   width: 100px;
   height: 40px;
@@ -54,4 +56,7 @@ input:focus{
   font-weight: bold;
   border-color: #0b66de;
   border-radius: 5px;
+}
+#output{
+  opacity: 30%;
 }
