@@ -11,6 +11,7 @@ var annullaButton = document.getElementById('annulla');
 //creo la variabile costo del biglietto
 var costoBiglietto = document.getElementById('costoBiglietto');
 var msg = "";
+var numID;
 //GENERAZIONE del biglietto------------------------------------------------
 generaButton.addEventListener('click',
   function(){
@@ -33,10 +34,11 @@ generaButton.addEventListener('click',
       msg=costoBiglietto.toFixed(2);
       var sconto = "Biglietto Standard";
     }
-    console.log(costoBiglietto);
+    numID = Math.floor(Math.random()*10000);
     //rimando a video i risultati
     document.getElementById('nome').innerHTML= nome;
     document.getElementById('sconto').innerHTML= sconto;
+    document.getElementById('numID').innerHTML= numID;
     document.getElementById('costoBiglietto').innerHTML= msg;
   }
 )
@@ -44,9 +46,13 @@ generaButton.addEventListener('click',
 //ANNULLAMENTO del biglietto------------------------------------------------
 annullaButton.addEventListener('click',
   function(){
-    document.getElementById('output').style.display = ('none');
+    document.getElementById('output').style.opacity = ('30%');
     nomeU.value = "";
     kmP.value = "";
     etaU.value = "";
     costoBiglietto.value = "";
+    document.getElementById('nome').innerHTML= "";
+    document.getElementById('sconto').innerHTML= "";
+    document.getElementById('numID').innerHTML= "";
+    document.getElementById('costoBiglietto').innerHTML="" ;
   });
