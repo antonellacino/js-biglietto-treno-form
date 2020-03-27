@@ -6,34 +6,54 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
-    <header>
-      <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
-    </header>
     <main>
+      <div class="container flexColumn">
+        <h1>CALCOLA IL PREZZO DEL BIGLIETTO</h1>
       <!--Div di inserimento dati x il biglietto------------------------->
-      <div id="input">
-        <div>
-          <label for="name">Nome e Cognome</label>
-          <input type="text" name="gender" id="name" value="">
-          <label for="km">Km</label>
-          <input type="number" name="gender" id="km" value="">
-          <label for="eta">Età</label>
-          <input type="number" name="gender" id="eta" value="">
+        <div id="input" class="divContainer">
+          <div class="campiInput">
+            <div class="flexColumn">
+              <label for="name">Nome e Cognome</label>
+              <input type="text" name="gender" id="name" value="">
+            </div>
+            <div class="flexColumn">
+              <label for="km">Km</label>
+              <input type="number" name="gender" id="km" value="">
+            </div>
+            <div class="flexColumn">
+              <label for="eta">Età</label>
+              <input type="number" name="gender" id="eta" value="">
+            </div>
+          </div>
+          <!--div bottoni-->
+          <div>
+            <button type="button" id="genera" class="btn">Genera</button>
+            <button type="button" id="annulla" class="btn">Annulla</button>
+          </div>
         </div>
-        <div>
-          <button type="button" name="button" id="genera">Genera</button>
-          <button type="button" name="button" id="annulla">Annulla</button>
+
+        <!--Div dettaglio biglietto--------------------------------------->
+        <h2>DETTAGLI BIGLIETTO</h2>
+        <div id="output" class="divContainer campiInput">
+          <div class="flexColumn">
+            <label for="name">Nome e Cognome</label>
+            <span id="nome">Antonella Cino</span>
+          </div>
+          <div class="flexColumn">
+            <label for="offerta">Offerta</label>
+            <span id="offerta">Antonella Cino</span>
+          </div>
+          <div class="flexColumn">
+            <label for="numID">Numero ID</label>
+            <span id="numID">485985</span>
+          </div>
+          <div class="flexColumn">
+            <label for="costoBiglietto">Costo biglietto</label>
+            <span id="costoBiglietto">123</span>
+          </div>
         </div>
-      </div>
-      <!--Div dettaglio biglietto--------------------------------------->
-      <div id="output">
-        <h1 id="costoBiglietto">Il costo è</h1>
       </div>
     </main>
-
-
-
-
 
 
 
